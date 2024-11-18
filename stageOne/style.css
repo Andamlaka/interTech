@@ -1,0 +1,272 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: #f9f9f9;
+}
+
+/* Header */
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Profile */
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.profile h1 {
+    font-size: 20px;
+    margin: 0;
+}
+
+/* Navigation */
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section */
+#hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: #007bff;
+    color: #fff;
+}
+
+.sticky-words {
+    white-space: nowrap;
+}
+
+/* General Section Styling */
+section {
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Projects Section */
+#projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#projects h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Individual Project Cards */
+#projects .project {
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background-color 0.3s;
+    margin: 10px;
+}
+
+#projects .project:hover {
+    transform: translateY(-10px);
+    background-color: #007bff;
+    color: #fff;
+}
+
+#projects .project h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#projects .project p {
+    font-size: 1rem;
+    color: #333;
+}
+/* contact */
+#contact {
+    padding: 40px 20px;
+    background-color:#333;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: center;
+    color: #fff;
+    
+    
+}
+#contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#contact p {
+    font-size: 1.1rem;
+    
+    margin-bottom: 20px;
+}
+
+.contact-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+
+.contact-link i {
+    margin-right: 10px;
+    font-size: 1.5rem;
+    color: #007bff;
+    
+}
+.fab {
+    color: #007bff;
+    font-size: 50px;
+}
+
+.contact-link:hover {
+    transform: translateY(-5px);
+    background-color: #007bff;
+    color: #fff;
+}
+
+.contact-link:hover i {
+    color: #fff;
+}
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    /* margin-top:0px; */
+}
+
+/* Media Queries for Responsiveness */
+
+/* Medium Screens */
+@media (max-width: 768px) {
+    /* Stack the header items vertically on smaller screens */
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+
+    header nav ul li {
+        margin-bottom: 10px;
+    }
+
+    /* Adjust profile picture and name */
+    .profile img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .profile h1 {
+        font-size: 18px;
+    }
+
+    /* Hero Section Padding */
+    #hero {
+        padding: 30px 20px;
+    }
+
+    /* Projects section: Two columns layout */
+    #projects .project {
+        width: 48%;
+    }
+}
+
+/* Large Screens */
+@media (min-width: 1024px) {
+    /* Projects section: Three columns layout for larger screens */
+    #projects .project {
+        width: 30%;
+    }
+}
+ 
+/* Small Screens */
+@media (max-width: 480px) {
+    /* Make the hero section text more compact on mobile */
+    #hero h1 {
+        font-size: 24px;
+    }
+
+    #hero p {
+        font-size: 16px;
+    }
+
+    /* Adjust sections for smaller screens */
+    section {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .profile h1 {
+        font-size: 16px;
+    }
+
+    /* Navigation Styling */
+    header nav ul li {
+        margin: 0 10px;
+    }
+
+    /* Projects section: One column layout */
+    #projects .project {
+        width: 100%;
+    }
+
+    /* Disable hover effect on mobile */
+    #projects .project:hover {
+        transform: none;
+        background-color: #007bff;
+        color: #fff;
+    }
+}
